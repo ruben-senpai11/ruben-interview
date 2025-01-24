@@ -18,16 +18,17 @@ import soon from "../assets/img/coming-soon.webp"
 <template>
   <div className="main py-5">
     <section className="d-flex flex-column gap-6">
-      <h1 className="text-[48px] ">Portfolio</h1>
-      <div className="d-flex flex-column gap-12 m-auto ">
+      <!-- <h1 className="text-[48px] mt-5 ">A pick of side-projects & Freelance missions</h1> -->
+      <div className="d-flex flex-column gap-12 m-auto mt-5 ">
         <div className="summary d-flex flex-column ">
-          <p>
+          <!-- <p>
             Summary : Proven expertise in building fluid and responsive interfaces from scratch,
             allowing great flexibility across technologies.
-          </p>
+          </p> -->
         </div>
         <div className="d-flex flex-column gap-8">
-          <h2>Freelance & Side Projects</h2>
+          <h1 className="text-[48px] mb-5 ">A pick of side-projects & Freelance missions</h1>
+          <!-- <h2>Freelance & Side Projects</h2> -->
           <div className="projects-grid ">
             <Project :image="bunny" title="Bunny Management" :stack="['Laravel', 'PHP', 'jQUERY', 'MySQL', 'Bootstrap']"
               link="https://whitedev.vercel.app/video/bunny.webm"
@@ -37,7 +38,7 @@ import soon from "../assets/img/coming-soon.webp"
               description="We given this store a new look with a pixel-perfect design mockup into Shopify theme translation" />
             <Project :image="bandage" title="Bandage E-commerce" :stack="['React', 'TS', 'Tailwind CSS', 'Figma']"
               link="https://bandage-ecommerce-ui.vercel.app/"
-              description="Translating Figma mockup into a pixel-perfect website. I’ve improved UX with lazyload, animations..." />
+              description="Translating Figma mockup into a pixel-perfect website. I've improved UX with lazyload, animations..." />
             <Project :image="evren" title="Evren Shah Portfolio" :stack="['React', 'TS', 'HTML & CSS', 'Figma']"
               link="https://portofolio-rosy-eight.vercel.app/"
               description="Integration of a frontend developer portfolio mockup in a react website. I've added a beta double theme switch" />
@@ -52,11 +53,11 @@ import soon from "../assets/img/coming-soon.webp"
             <Project :image="portfolio" title="My Portfolio" :stack="['Next.js, TypeScript, Tailwind CSS']"
               link="https://whitedev.vercel.app/"
               description="Crafted a simple & unique portfolio to tell you about me. It involved out-of-the-box thinking, user-centered approach and so on..." />
-          </div>
+            <!-- </div>
         </div>
         <div className='d-flex flex-column gap-8'>
           <h2>For the community Projects</h2>
-          <div className='projects-grid '>
+          <div className='projects-grid '> -->
             <Project :image="navbar" title="Responsive Navbar" :stack="['HTML & CSS', 'JavaScript']"
               link="https://github.com/ruben-senpai11/Reponsive-Navbar"
               description="Fully Responsive Navbar built from scratch. If creating Navbar stucks, here is a built-from-scratch and easy-to-understand responsive navbar to help you stand out." />
@@ -66,7 +67,7 @@ import soon from "../assets/img/coming-soon.webp"
           </div>
         </div>
       </div>
-      <div className="d-flex flex-column gap-4 my-10">
+      <!-- <div className="d-flex flex-column gap-4 my-10">
         <h2>Find out more of my work</h2>
         <div className="socials d-flex gap-12 sm:gap-24 flex-wrap ">
           <span className="d-flex gap-2">
@@ -104,7 +105,7 @@ import soon from "../assets/img/coming-soon.webp"
             </Link>
           </span>
         </div>
-      </div>
+      </div> -->
     </section>
   </div>
 </template>
@@ -120,20 +121,19 @@ import soon from "../assets/img/coming-soon.webp"
   justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 2.7%;
+  gap: 4%;
 }
 
 
 @media screen and (max-width: 1200px) {
 
   .projects-grid {
-    gap: 5.9%
+    gap: 2.9%
   }
 
 }
 
-@media screen and (max-width: 924px) {
-
+@media screen and (max-width: 1024px) {
   .projects-grid {
     gap: 3%
   }

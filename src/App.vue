@@ -28,6 +28,14 @@ import Main from './components/Main.vue'
 
 <style scoped>
 .container-xl {
-  max-width: 1150px;
+  max-width: 1250px;
+  padding: 0 2% !important;
+}
+
+@media (max-width: 1250px) {
+  .container-xl {
+    padding: 0 5% !important;
+  }
+
 }
 </style>

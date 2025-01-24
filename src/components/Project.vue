@@ -14,10 +14,10 @@ defineProps({
       <div class="cover-image flex flex-col">
         <img :src="image" alt="Project Image" />
       </div>
-      <div class="infos flex flex-col gap-2">
-        <div class="flex items-center justify-between ">
+      <div class="infos d-flex flex-column gap-2">
+        <div class="d-flex justify-content-between ">
           <p class="title">{{ title }}</p>
-          <span class="undeployed-mark flex " title="Actually not deployed">
+          <span v-if="link == ''" class="undeployed-mark d-flex " title="Actually not deployed">
             <span style="width:16px; height:16px; padding-top:4.5px">
               <svg fill="#aaa" height="16px" width="16px" viewBox="0 0 45.311 45.311">
                 <g>
@@ -28,12 +28,12 @@ defineProps({
               </svg>
             </span>
           </span>
-          <p class="description">{{ description }} </p>
-          <p class="stack flex gap-2 flex-wrap m-0 p-0">
-            <span v-for="(techno, index) in stack" :key="index" class="blue m-0 p-0">
-              {{ techno }}{{ index + 1 < stack.length ? "," : "" }} </span>
-          </p>
         </div>
+        <p class="description">{{ description }} </p>
+        <p class="stack flex gap-2 flex-wrap m-0 p-0">
+          <span v-for="(techno, index) in stack" :key="index" class="blue m-0 p-0">
+            {{ techno }}{{ stack && index + 1 < stack.length ? "," : "" }} </span>
+        </p>
       </div>
     </div>
   </div>
@@ -41,15 +41,17 @@ defineProps({
 
 <style>
 .project {
-  width: 31.5%;
+  width: 30.5%;
+  min-width: 290px;
+  max-width: 450px;
   height: 400px;
   height: auto;
   padding: 0;
   margin: 0;
   margin-bottom: 5%;
-  border: 1px solid darkkhaki;
+  border: 1px solid var(--secondary-color);
   border-radius: 4px;
-  box-shadow: 0 0 12px #dcdcdc55;
+  box-shadow: 0 0 12px var(--primary-color);
   display: flex;
 }
 
@@ -89,12 +91,12 @@ defineProps({
 @media screen and (max-width: 1200px) {
 
   .project {
-    width: 47%;
+    width: 31.4%;
     margin-bottom: 5%;
   }
 }
 
-@media screen and (max-width: 924px) {
+@media screen and (max-width: 1024px) {
 
   .project {
     width: 48.5%;
@@ -110,6 +112,8 @@ defineProps({
 
   .project {
     width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
     margin-bottom: 35px;
   }
 
