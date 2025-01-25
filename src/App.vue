@@ -16,8 +16,8 @@ onMounted(() => {
 
     gsap.fromTo(
       (".splash-container"),
-      { opacity: "1" },
-      { opacity: "0", duration: 2, ease: "expo.out", paused: false }
+      { width: "100%" },
+      { width: "0%", duration: 3, ease: "expo.out", paused: false }
     );
   }, delay);
 })

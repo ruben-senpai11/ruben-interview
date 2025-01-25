@@ -41,7 +41,7 @@ onMounted(() => {
         {{ name }}
         <span class="font-mono fw-bolder secondaryy">{{ label }}</span>
       </p>
-      <p class="developed-in d-flex fs-5 fs-sm-2 position-absolute green ">
+      <p class="developed-in d-flex fs-5 fs-sm-2 position-absolute primary ">
         proudly developed in
         <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="55" height="55" />
       </p>
