@@ -31,7 +31,7 @@ defineProps({
         </div>
         <p class="description">{{ description }} </p>
         <p class="stack flex gap-2 flex-wrap m-0 p-0">
-          <span v-for="(techno, index) in stack" :key="index" class="blue m-0 p-0">
+          <span v-for="(techno, index) in stack" :key="index" class="primary m-0 p-0">
             {{ techno }}{{ stack && index + 1 < stack.length ? "," : "" }} </span>
         </p>
       </div>
@@ -49,9 +49,9 @@ defineProps({
   padding: 0;
   margin: 0;
   margin-bottom: 5%;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--primary-color);
   border-radius: 4px;
-  box-shadow: 0 0 12px var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
   display: flex;
 }
 
@@ -67,7 +67,7 @@ defineProps({
 
 .infos {
   padding: 10px 15px;
-  background-color: #d5d5d511;
+  background-color: var(--secondary-color-light);
 }
 
 .infos di {

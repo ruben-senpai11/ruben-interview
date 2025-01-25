@@ -25,12 +25,7 @@ onMounted(() => {
     <SunIcon />
     <label className="theme-switch">
       <label htmlFor="theme-swith"></label>
-      <input
-        id="theme-swith"
-        type="checkbox"
-        :checked="themeMode === 'dark'"
-        @change="handleToggle"
-      />
+      <input id="theme-swith" type="checkbox" :checked="themeMode === 'dark'" @change="handleToggle" />
       <span className="theme-slider round"></span>
     </label>
     <MoonIcon />
@@ -43,7 +38,7 @@ onMounted(() => {
   justify-content: center;
   align-items: center;
   gap: 7px;
-  z-index: 99999;
+  /* z-index: 99999; */
 }
 
 .theme-switch {
@@ -83,24 +78,24 @@ onMounted(() => {
   transition: 0.4s;
 }
 
-input:checked + .theme-slider:before {
+input:checked+.theme-slider:before {
   -webkit-transform: translateX(14px);
   -ms-transform: translateX(14px);
   transform: translateX(14px);
   background-color: white;
 }
 
-input + .theme-slider {
+input+.theme-slider {
   background-color: transparent;
   border: 1px solid black;
 }
 
-input:checked + .theme-slider {
+input:checked+.theme-slider {
   border: 1px solid white;
   background-color: transparent;
 }
 
-input:focus + .theme-slider {
+input:focus+.theme-slider {
   box-shadow: 0 0 1px var(--dark-orange);
 }
 

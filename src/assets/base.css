@@ -1,16 +1,20 @@
 :root {
   --foreground-color: #000000;
-  --background-color: #f8faf9;
+  --background-color: #fafafa;
   --header-background: #ffffff45;
   --primary-color: #1922FB;
   --secondary-color: #FFC700;
+  --primary-color-light: #1922FB50;
+  --secondary-color-light: #FFC70009;
 }
 
 [ data-theme="dark"] {
-  --foreground-color: #f8faf9;
+  --foreground-color: #fafafa;
   --background-color: #1a1a1a;
-  --primary-color: #FFC700;
+  --primary-color: #FFc700;
   --secondary-color: #1922FB;
+  --primary-color-light: #FFC70022;
+  --secondary-color-light: #3037f51a;
 }
 
 
@@ -46,7 +50,43 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* div {
-  color: var(--foreground-color);
-  background-color: var(--background-color);
-} */
+
+.primary {
+  color: var(--primary-color);
+}
+
+.secondary {
+  color: var(--secondary-color);
+}
+
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+
+/* Scroll Bar  */
+
+::-webkit-scrollbar {
+  width: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}

@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import ThemeMode from '../components/ThemeMode.vue'
+
+const props = defineProps<{
+  name: string
+}>()
+
 </script>
 
 <template>
@@ -9,7 +14,7 @@ import ThemeMode from '../components/ThemeMode.vue'
         <a href="#" class="navbar-brand d-flex align-items-center justify-content-between gap-3 m-0 p-0">
           <img src="../assets/img/profile-pic-yellow.png" alt="Author picture" width="48" height="48"
             class="rounded-5 m-0 p-0" />
-          <p class="m-0 p-0">Ruben Honfovou</p>
+          <p class="m-0 p-0">{{ name }}</p>
         </a>
         <ThemeMode />
       </div>

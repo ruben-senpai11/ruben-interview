@@ -2,26 +2,32 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import ThemeMode from './components/ThemeMode.vue'
+import SplashScreen from "./components/SplashScreen.vue"
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'
+import { onMounted } from 'vue'
+import gsap from "gsap";
+
+const name = "Ruben Honfovou"
+const delay = 2500
+
+onMounted(() => {
+  const timeout = setTimeout(() => {
+
+    gsap.fromTo(
+      (".splash-container"),
+      { opacity: "1" },
+      { opacity: "0", duration: 2, ease: "expo.out", paused: false }
+    );
+  }, delay - 500);
+})
+
 </script>
 
 <template>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-  <RouterView /> -->
-
+  <SplashScreen :name=name label="Interview Project" :timer=delay />
   <div class="container-xl">
-    <Header />
+    <Header :name=name />
     <Main />
   </div>
 </template>
