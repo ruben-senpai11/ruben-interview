@@ -9,7 +9,7 @@ import { onMounted } from 'vue'
 import gsap from "gsap";
 
 const name = "Ruben Honfovou"
-const delay = 500
+const delay = 2500
 
 onMounted(() => {
   const timeout = setTimeout(() => {
