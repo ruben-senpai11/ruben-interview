@@ -2,6 +2,7 @@
 import { inject } from 'vue';
 import { ref } from 'vue';
 import { onMounted } from 'vue';
+import Stack from './Stack.vue';
 
 let language: any = ref([]);
 let library: any = ref([]);
@@ -9,6 +10,7 @@ let framework: any = ref([]);
 let cssFramework: any = ref([]);
 let api: any = ref([]);
 let database: any = ref([]);
+let status: any = ref([])
 
 const fetchStackContents = (stack: string) => {
   const elements = document.querySelectorAll(".stack ." + stack);
@@ -32,7 +34,8 @@ const loadFilters = () => {
     "HTML & CSS",
     "JavaScript",
     "TypeScript"
-  ]
+  ];
+  status.value = ["Production", "Developement", "Paused", "Aborted"]
   library = fetchStackContents("library");
   framework = fetchStackContents("framework");
   cssFramework = fetchStackContents("cssFramework");
@@ -54,9 +57,9 @@ const loadFilters = () => {
       <h4 class="m-0">Filters</h4>
       <div class="d-flex gap-2 gap-lg-4 justify-content-between ">
         <button @click="loadFilters()" class="load btn fs-6 d-flex align-items-center gap-2 bg--primary ">
-          <!-- <span v-if="!filtersVisible.value">Show Filters </span>
-          <span v-else>Hide Filters </span> -->
-          <span>Show Filters </span>
+          <span v-if="!filtersVisible">Show Filters </span>
+          <span v-else>Hide Filters </span>
+          <!-- <span>Show Filters </span> -->
         </button>
         <button class="reset btn fs-6 d-flex align-items-center gap-2 bg--primary ">
           <span>Reset All</span>
@@ -69,81 +72,20 @@ const loadFilters = () => {
         </button>
       </div>
     </div>
-    <div v-if="filtersVisible" class="container d-flex flex-column gap-4 text-center">
-      <div class="row">
-        <div class="col d-flex justify-content-lg-start align-content-center p-0 gap-4 ">
-          <label class="label bg-danger-subtle fs-6">Library :</label>
-          <div class="filters-button d-flex align-items-center justify-content-center gap-2 ">
-            <button class="filter-button btn" v-for="(content, index) in library" :key="index">{{ content }}</button>
-          </div>
-        </div>
-        <div class="col d-flex justify-content-lg-start align-content-center p-0 gap-4 ">
-          <label class="label bg-info fs-6">Framework :</label>
-          <div class="buttons-wrapper d-flex justify-content-center gap-2 ">
-            <button class="filter-button btn" v-for="(content, index) in framework" :key="index">{{ content }}</button>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col d-flex justify-content-lg-start align-content-center p-0 gap-4 ">
-          <label class="label bg-success-subtle fs-6">Programming Language :</label>
-          <div class="filters-button d-flex align-items-center justify-content-center gap-2 ">
-            <button class="filter-button btn" v-for="(content, index) in language" :key="index">{{ content }}</button>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col d-flex justify-content-lg-start align-content-center p-0 gap-4 ">
-          <label class="label bg-body-tertiary fs-6">CSS Library :</label>
-          <div class="filters-button d-flex align-items-center justify-content-center gap-2 ">
-            <button class="filter-button btn" v-for="(content, index) in cssFramework" :key="index">{{ content }}</button>
-          </div>
-          <div class="col d-flex justify-content-lg-start align-content-center p-0 gap-4 ">
-            <label class="label bg-danger-subtle fs-6">API :</label>
-            <div class="filters-button d-flex align-items-center justify-content-center gap-2 ">
-              <button class="filter-button btn" v-for="(content, index) in api" :key="index">{{ content }}</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col d-flex justify-content-lg-start align-content-center p-0 gap-4 ">
-          <label class="label bg-dark-subtle fs-6">Database :</label>
-          <div class="filters-button d-flex align-items-center justify-content-center gap-2 ">
-            <button class="filter-button btn" v-for="(content, index) in database" :key="index">{{ content }}</button>
-          </div>
-        </div>
-        <div class="col d-flex justify-content-lg-start align-content-center p-0 gap-4 ">
-          <label class="label bg-info fs-6">Statut :</label>
-          <div class="filters-button d-flex align-items-center justify-content-center gap-2 ">
-            <button class="filter-button btn" v-for="(content, index) in library" :key="index">{{ content }}</button>
-          </div>
-        </div>
-      </div>
+    <div class="container d-flex flex-column gap-3 text-center">
+      <Stack label="Librairies" :array=library />
+      <Stack label="Frameworks" :array=framework />
+      <Stack label="Programming Languages" :array=language />
+      <Stack label="CSS Libraries" :array=cssFramework />
+      <Stack label="APIs" :array=api />
+      <Stack label="Databases" :array=database />
+      <Stack label="Statut" :array=status />
     </div>
   </div>
 </template>
 
 
-<style scoped>
-.label {
-  height: max-content;
-  padding: 5px 10px;
-  border-radius: 1px;
-  font-weight: 600;
-  color: var(--primary-color) !important;
-  background-color: var(--primary-color-light) !important;
-  box-shadow: 0 0 10px var(--primary-color-light);
-}
-
-.filter-button {
-  margin: auto;
-  padding: 0px 4px !important;
-  height: max-content;
-  color: var(--foreground-color) !important;
-  background-color: var(--primary-color-light);
-}
-
+<style >
 button.reset.btn,
 button.load.btn {
   padding: 4px 15px;
@@ -162,5 +104,6 @@ button.load.btn {
   button.load.btn {
     padding: 1px 5px;
   }
+
 }
 </style>
