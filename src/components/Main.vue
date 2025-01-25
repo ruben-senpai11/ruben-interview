@@ -19,7 +19,7 @@ import soon from "../assets/img/coming-soon.webp"
 <template>
   <div class="main py-5">
     <div class="d-flex flex-column gap-5">
-      <h2 class="text-[48px] my-2  ">A pick of my best side-projects & Freelance missions</h2>
+      <h3 class="text-[48px] my-2  ">A pick of my best side-projects & Freelance missions</h3>
       <Filters />
       <section class="d-flex flex-column gap-12 m-auto mt- ">
         <div class="summary d-flex flex-column ">
@@ -27,36 +27,42 @@ import soon from "../assets/img/coming-soon.webp"
         <div class="d-flex flex-column gap-8">
           <!-- <h5 class="mb-5 mt-0">with a bunch of filter to enhance stack understanding, enjoy!</h5> -->
           <div class="projects-grid ">
-            <Project :image="bunny" title="Bunny Management" :stack="['Laravel', 'PHP', 'jQUERY', 'MySQL', 'Bootstrap']"
+            <Project :image="bunny" title="Bunny Management" :library="['jQUERY']" :framework="['Laravel']"
+              :language="['PHP']" :cssFramework="['Bootstrap']" :api="['REST-API']" :database="['MySQL',]"
               link="https://whitedev.vercel.app/video/bunny.webm"
               description="With given templates, I created dynamic forms, custom pages & datatables and an awesome landing page" />
-            <Project :image="lemonplet" title="Lemönplet" :stack="['Shopify', 'HTML & CSS', 'JavaScript', 'jQUERY']"
-              link="https://lemonplet.com/"
+            <Project :image="lemonplet" title="Lemönplet" :library="['jQUERY']"
+              :language="['Liquid', 'HTML & CSS', 'JavaScript']" link="https://lemonplet.com/"
               description="We given this store a new look with a pixel-perfect design mockup into Shopify theme translation" />
-            <Project :image="bandage" title="Bandage E-commerce" :stack="['React', 'TypeScript', 'Tailwind CSS', 'Figma']"
+            <Project :image="bandage" title="Bandage E-commerce" :library="['React']" :framework="[]"
+              :language="['TypeScript']" :cssFramework="['Tailwind CSS']" :database="[]"
               link="https://bandage-ecommerce-ui.vercel.app/"
               description="Translating Figma mockup into a pixel-perfect website. I've improved UX with lazyload, animations..." />
-            <Project :image="evren" title="Evren Shah Portfolio" :stack="['React', 'TypeScript', 'HTML & CSS', 'Figma']"
+            <Project :image="evren" title="Evren Shah Portfolio" :library="['React']" :framework="[]"
+              :language="['HTML & CSS', 'TypeScript']" :cssFramework="[]" :database="[]"
               link="https://portofolio-rosy-eight.vercel.app/"
               description="Integration of a frontend developer portfolio mockup in a react website. I've added a beta double theme switch" />
-            <Project :image="fig" title="Fig Intranet" :stack="['PHP', 'jQUERY', 'HTML & CSS']" link=""
+            <Project :image="fig" title="Fig Intranet" :library="['jQUERY']" :framework="[]"
+              :language="['PHP', 'HTML & CSS']" :cssFramework="['Bootstrap']" :database="[]" link=""
               description="For the video games events, we've built this website accessible not through internet but local network to supply essential information to our guests." />
-            <Project :image="mangaverse" title="Mangaverse"
-              :stack="['Next.js', 'TypeScript', 'Tailwind CSS', 'Apollo GraphQL']"
+            <Project :image="mangaverse" title="Mangaverse" :framework="['Next.js']" :library="[]"
+              :language="['TypeScript']" :cssFramework="['Tailwind CSS']" :api="['GraphQL']" :database="['PostgreSQL']"
               link="https://my-mangaverse.vercel.app/"
               description="Building a unique web app involving multiple-theme switch, server actions, API, design, user-centric approach..." />
-            <Project :image="stratosedi" title="Stratos EDI Shopify App" :stack="['Remix', 'React', 'Prisma', 'GraphQL']"
-              link=""
+            <Project :image="stratosedi" title="Stratos EDI Shopify App" :library="['React']" :framework="['Remix']"
+              :language="['TypeScript']" :cssFramework="['Polaris']" :api="['GraphQL']" :database="['Prisma',]" link=""
               description="Building from scratch a unique app to improve orders tracking by the organization merchants" />
-            <Project :image="portfolio" title="My Portfolio" :stack="['Next.js', 'TypeScript', 'Tailwind CSS']"
+            <Project :image="portfolio" title="My Portfolio" :library="['React']" :framework="['Next.js']"
+              :language="['TypeScript']" :cssFramework="['Tailwind CSS']" :database="[]"
               link="https://whitedev.vercel.app/"
               description="Crafted a simple & unique portfolio to tell you about me. It involved out-of-the-box thinking, user-centered approach and so on..." />
-            <Project :image="navbar" title="Responsive Navbar" :stack="['HTML & CSS', 'JavaScript']"
+            <Project :image="navbar" title="Responsive Navbar" :library="[]" :framework="[]"
+              :language="['HTML & CSS', 'JavaScript']" :cssFramework="[]" :database="[]"
               link="https://github.com/ruben-senpai11/Reponsive-Navbar"
               description="Fully Responsive Navbar built from scratch. If creating Navbar stucks, here is a built-from-scratch and easy-to-understand responsive navbar to help you stand out." />
-            <Project :image="soon" title="Multiple Themes Switches" :stack="[]" link="" description="Coming soon..." />
-            <Project :image="soon" title="Infinite Scroll" :stack="[]" link="" description="Coming soon..." />
-            <Project :image="soon" title="Responsive Grid" :stack="[]" link="" description="Coming soon..." />
+            <Project :image="soon" title="Multiple Themes Switches" link="" description="Coming soon..." />
+            <Project :image="soon" title="Infinite Scroll" link="" description="Coming soon..." />
+            <Project :image="soon" title="Responsive Grid" link="" description="Coming soon..." />
           </div>
         </div>
       </section>
@@ -120,7 +126,7 @@ import soon from "../assets/img/coming-soon.webp"
               </g>
             </svg> -->
             <a href="https://www.linkedin.com/in/ruben-white22/" target="_blank" class="d-flex gap-2 primary ">My
-              Portfolio
+              Website
               <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
                 <path fillRule="evenodd"
                   d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />

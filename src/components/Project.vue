@@ -3,7 +3,13 @@ defineProps({
   image: String,
   title: String,
   description: String,
-  stack: Array,
+  library: Array,
+  framework: Array,
+  language: Array,
+  cssFramework: Array,
+  api: Array,
+  database: Array,
+  statut: String,
   link: String,
 })
 </script>
@@ -29,10 +35,21 @@ defineProps({
             </span>
           </span>
         </div>
-        <p class="description">{{ description }} </p>
+        <p class="description">{{ description }}</p>
         <p class="stack flex gap-2 flex-wrap m-0 p-0">
-          <span v-for="(techno, index) in stack" :key="index" class="primary m-0 p-0">
-            {{ techno }}{{ stack && index + 1 < stack.length ? "," : "" }} </span>
+
+          <span v-for="(techno, index) in language" :key="index" class="p-language primary m-0 p-0">{{ techno }}</span>
+
+          <span v-for="(techno, index) in library" :key="index" class="library primary m-0 p-0">{{ techno }}</span>
+
+          <span v-for="(techno, index) in framework" :key="index" class="framework primary m-0 p-0">{{ techno }}</span>
+
+          <span v-for="(techno, index) in cssFramework " :key="index" class="cssFramework primary m-0 p-0">{{ techno
+          }}</span>
+
+          <span v-for="(techno, index) in api " :key="index" class="api primary m-0 p-0">{{ techno }}</span>
+
+          <span v-for="(techno, index) in database" :key="index" class="database primary m-0 p-0">{{ techno }}</span>
         </p>
       </div>
     </div>
