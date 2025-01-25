@@ -17,11 +17,11 @@ import soon from "../assets/img/coming-soon.webp"
 </script>
 
 <template>
-  <div class="main py-5">
-    <div class="d-flex flex-column gap-5">
+  <div class="main py-lg-5 py-4">
+    <div class="d-flex flex-column gap-lg-5 gap-3">
       <h3 class="text-[48px] my-2  ">A pick of my best side-projects & Freelance missions</h3>
       <Filters />
-      <section class="d-flex flex-column gap-12 m-auto mt- ">
+      <section class="d-flex flex-column gap-12 m-auto ">
         <div class="summary d-flex flex-column ">
         </div>
         <div class="d-flex flex-column gap-8">

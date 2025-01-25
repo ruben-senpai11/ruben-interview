@@ -50,15 +50,15 @@ const loadFilters = () => {
 
 <template>
   <div class="d-flex flex-column gap-2">
-    <div class="d-flex align-items-center justify-content-between flex-wrap">
+    <div class="d-flex gap-2 align-items-center justify-content-between flex-wrap">
       <h4 class="m-0">Filters</h4>
-      <div class="d-flex gap-2 gap-lg-4">
-        <button @click="loadFilters()" class="load btn fs-5 d-flex align-items-center gap-2 bg--primary ">
+      <div class="d-flex gap-2 gap-lg-4 justify-content-between ">
+        <button @click="loadFilters()" class="load btn fs-6 d-flex align-items-center gap-2 bg--primary ">
           <!-- <span v-if="!filtersVisible.value">Show Filters </span>
           <span v-else>Hide Filters </span> -->
           <span>Show Filters </span>
         </button>
-        <button class="reset btn fs-5 d-flex align-items-center gap-2 bg--primary ">
+        <button class="reset btn fs-6 d-flex align-items-center gap-2 bg--primary ">
           <span>Reset All</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
             class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">

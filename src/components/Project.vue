@@ -125,7 +125,7 @@ defineProps({
   }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 670px) {
 
   .project {
     width: 100%;
