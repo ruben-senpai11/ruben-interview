@@ -9,7 +9,7 @@ import { onMounted } from 'vue'
 import gsap from "gsap";
 
 const name = "Ruben Honfovou"
-const delay = 2500
+const delay = 500
 
 onMounted(() => {
   const timeout = setTimeout(() => {
@@ -19,7 +19,7 @@ onMounted(() => {
       { opacity: "1" },
       { opacity: "0", duration: 2, ease: "expo.out", paused: false }
     );
-  }, delay - 500);
+  }, delay);
 })
 
 </script>

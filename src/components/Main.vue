@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+import Filters from "./Filters.vue"
 import Project from "./Project.vue"
 
 import stratosedi from "../assets/img/strastosedi1.png"
@@ -19,7 +19,8 @@ import soon from "../assets/img/coming-soon.webp"
 <template>
   <div class="main py-5">
     <div class="d-flex flex-column gap-5">
-      <h2 class="text-[48px] my-2 mb-5 ">A pick of my best side-projects & Freelance missions</h2>
+      <h2 class="text-[48px] my-2  ">A pick of my best side-projects & Freelance missions</h2>
+      <Filters />
       <section class="d-flex flex-column gap-12 m-auto mt- ">
         <div class="summary d-flex flex-column ">
         </div>
@@ -29,24 +30,25 @@ import soon from "../assets/img/coming-soon.webp"
             <Project :image="bunny" title="Bunny Management" :stack="['Laravel', 'PHP', 'jQUERY', 'MySQL', 'Bootstrap']"
               link="https://whitedev.vercel.app/video/bunny.webm"
               description="With given templates, I created dynamic forms, custom pages & datatables and an awesome landing page" />
-            <Project :image="lemonplet" title="Lemönplet" :stack="['Shopify', 'HTML & CSS', 'JS', 'jQUERY']"
+            <Project :image="lemonplet" title="Lemönplet" :stack="['Shopify', 'HTML & CSS', 'JavaScript', 'jQUERY']"
               link="https://lemonplet.com/"
               description="We given this store a new look with a pixel-perfect design mockup into Shopify theme translation" />
-            <Project :image="bandage" title="Bandage E-commerce" :stack="['React', 'TS', 'Tailwind CSS', 'Figma']"
+            <Project :image="bandage" title="Bandage E-commerce" :stack="['React', 'TypeScript', 'Tailwind CSS', 'Figma']"
               link="https://bandage-ecommerce-ui.vercel.app/"
               description="Translating Figma mockup into a pixel-perfect website. I've improved UX with lazyload, animations..." />
-            <Project :image="evren" title="Evren Shah Portfolio" :stack="['React', 'TS', 'HTML & CSS', 'Figma']"
+            <Project :image="evren" title="Evren Shah Portfolio" :stack="['React', 'TypeScript', 'HTML & CSS', 'Figma']"
               link="https://portofolio-rosy-eight.vercel.app/"
               description="Integration of a frontend developer portfolio mockup in a react website. I've added a beta double theme switch" />
             <Project :image="fig" title="Fig Intranet" :stack="['PHP', 'jQUERY', 'HTML & CSS']" link=""
               description="For the video games events, we've built this website accessible not through internet but local network to supply essential information to our guests." />
-            <Project :image="mangaverse" title="Mangaverse" :stack="['Next.js, TS, Tailwind CSS', 'Apollo GraphQL']"
+            <Project :image="mangaverse" title="Mangaverse"
+              :stack="['Next.js', 'TypeScript', 'Tailwind CSS', 'Apollo GraphQL']"
               link="https://my-mangaverse.vercel.app/"
               description="Building a unique web app involving multiple-theme switch, server actions, API, design, user-centric approach..." />
-            <Project :image="stratosedi" title="Stratos EDI Shopify App" :stack="['Remix, React, Prisma, GraphQL']"
+            <Project :image="stratosedi" title="Stratos EDI Shopify App" :stack="['Remix', 'React', 'Prisma', 'GraphQL']"
               link=""
               description="Building from scratch a unique app to improve orders tracking by the organization merchants" />
-            <Project :image="portfolio" title="My Portfolio" :stack="['Next.js, TypeScript, Tailwind CSS']"
+            <Project :image="portfolio" title="My Portfolio" :stack="['Next.js', 'TypeScript', 'Tailwind CSS']"
               link="https://whitedev.vercel.app/"
               description="Crafted a simple & unique portfolio to tell you about me. It involved out-of-the-box thinking, user-centered approach and so on..." />
             <Project :image="navbar" title="Responsive Navbar" :stack="['HTML & CSS', 'JavaScript']"

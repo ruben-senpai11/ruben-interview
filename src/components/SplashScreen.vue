@@ -37,9 +37,9 @@ onMounted(() => {
 <template>
   <div class="splash-container position-relative">
     <div v-if="showSplash" class="splash-screen w-100 h-100 ">
-      <p class="fs-1 primary fw-normal d-flex gap-4">
+      <p class="fs-1 primaryy fw-normal d-flex gap-4">
         {{ name }}
-        <span class="font-mono fw-bolder secondary">{{ label }}</span>
+        <span class="font-mono fw-bolder secondaryy">{{ label }}</span>
       </p>
       <p class="developed-in d-flex fs-5 fs-sm-2 position-absolute green ">
         proudly developed in
@@ -57,7 +57,15 @@ onMounted(() => {
   display: flex;
   background-color: var(--background-color);
   z-index: 9;
-  border: 45px solid var(--primary-color);
+  border: 45px solid #1922FB;
+}
+
+.splash-screen p:not(.green) {
+  color: #1922FB;
+}
+
+.splash-screen span {
+  color: #FFC700;
 }
 
 .splash-screen p {
@@ -83,7 +91,7 @@ onMounted(() => {
 
 @media screen and (max-width: 650px) {
   .splash-screen {
-    border: 35px solid var(--primary-color);
+    border: 35px solid #1922FB;
     padding: 15%;
   }
 
