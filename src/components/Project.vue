@@ -67,7 +67,7 @@ defineProps({
   </div>
 </template>
 
-<style>
+<style scoped>
 .project {
   width: 30.5%;
   /* min-width: 290px; */
@@ -121,6 +121,10 @@ defineProps({
   border: none;
 }
 
+a, p{
+  margin: 0!important;
+  padding: 0!important;
+}
 
 @media screen and (max-width: 1200px) {
 

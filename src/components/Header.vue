@@ -16,7 +16,8 @@ const props = defineProps<{
             class="rounded-5 m-0 p-0" />
           <p class="m-0 p-0 d-flex align-items-center flex-wrap text-wrap ">
             {{ name }}
-            <span class="m-0 p-0 primary text-wrap "> &nbsp;|&nbsp; Senior Frontend Developer</span>
+            <span class="m-0 p-0 orange text-wrap "> &nbsp;&nbsp;| &nbsp;</span>
+            <span class="m-0 p-0 primary text-wrap ">Senior Frontend Developer</span>
           </p>
         </a>
         <div class="theme-flex my-auto ">
@@ -90,5 +91,9 @@ nav {
   }
 }
 @media (max-width: 450px) {
+  
+  a p{
+    font-size: 1rem!important;
+  }
 }
 </style>

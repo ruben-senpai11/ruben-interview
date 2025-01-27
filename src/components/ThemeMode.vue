@@ -118,9 +118,4 @@ input:focus+.theme-slider {
   }
 }
 
-@media screen and (max-width: 300px) {
-  .theme {
-    /* display: none; */
-  }
-}
 </style>

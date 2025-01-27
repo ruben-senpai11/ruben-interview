@@ -35,12 +35,12 @@ onMounted(() => {
 <style scoped>
 .container-xl {
   max-width: 1250px;
-  padding: 0 2% !important;
+  padding: 0 3% !important;
 }
 
 @media (max-width: 1250px) {
   .container-xl {
-    padding: 0 5% !important;
+    padding: 0 7% !important;
   }
 
 }

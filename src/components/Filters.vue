@@ -16,45 +16,12 @@ defineProps({
 
 
 
-const fetchStackContents = (stack: string) => {
-  const elements = document.querySelectorAll(".stack ." + stack);
-  const stackContents: any = ref([]);
-  Array.from(elements).forEach((el) => {
-    let content = el.textContent && el.textContent.trim();
-    content = content && content.replace(/,/g, "")
-    if (!stackContents.value.includes(content)) {
-      stackContents.value.push(content);
-    }
-  });
-  return stackContents
-};
-
 let filtersVisible = ref(false)
 
 const toggleFilters = () => {
   filtersVisible.value = !filtersVisible.value
 }
-/*
-const loadFilters = () => {
-  language.value = [
-    "PHP",
-    "Liquid",
-    "HTML & CSS",
-    "JavaScript",
-    "TypeScript"
-  ];
-  status.value = ["Production", "Developement", "Paused", "Aborted"]
-  library = fetchStackContents("library");
-  framework = fetchStackContents("framework");
-  cssFramework = fetchStackContents("cssFramework");
-  api = fetchStackContents("api");
-  database = fetchStackContents("database");
 
-  console.log('library: ' + library.value);
-  console.log('library.length ' + library);
-  console.log('filtersVisible:' + filtersVisible);
-}
-*/
 </script>
 
 <template>

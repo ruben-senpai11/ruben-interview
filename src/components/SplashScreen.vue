@@ -37,7 +37,7 @@ onMounted(() => {
 <template>
   <div class="splash-container position-relative">
     <div v-if="showSplash" class="splash-screen w-100 h-100 ">
-      <p class="fs-1 primaryy fw-normal d-flex gap-4">
+      <p class="fs-1 primaryy fw-normal d-flex justify-content-center gap-4">
         {{ name }}
         <span class="font-mono fw-bolder secondaryy">{{ label }}</span>
       </p>
@@ -61,8 +61,8 @@ onMounted(() => {
 }
 
 .splash-screen p:not(.green) {
-  color: var(--foreground-color);
   color: #1922FB;
+  color: var(--foreground-color);
 }
 
 .splash-screen span {

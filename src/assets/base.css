@@ -50,17 +50,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a, p{
-  margin: 0!important;
-  padding: 0!important;
-}
-
 .primary {
   color: var(--primary-color);
 }
 
 .secondary {
   color: var(--secondary-color);
+}
+.orange{
+  color: #FFC700;
 }
 
 .green {
