@@ -14,12 +14,14 @@ const props = defineProps<{
         <a href="#" class="navbar-brand d-flex align-items-center justify-content-between flex-nowrap gap-3 m-0 p-0">
           <img src="../assets/img/profile-pic-yellow.png" alt="Author picture" width="48" height="48"
             class="rounded-5 m-0 p-0" />
-          <p class="m-0 p-0 d-flex align-items-center flex-wrap ">
+          <p class="m-0 p-0 d-flex align-items-center flex-wrap text-wrap ">
             {{ name }}
-            <span class="m-0 p-0 primary">&nbsp; | &nbsp; Senior Frontend Developer</span>
+            <span class="m-0 p-0 primary text-wrap "> &nbsp;|&nbsp; Senior Frontend Developer</span>
           </p>
         </a>
-        <ThemeMode />
+        <div class="theme-flex my-auto ">
+          <ThemeMode />
+        </div>
       </div>
     </nav>
   </div>
@@ -45,6 +47,12 @@ nav {
   color: inherit;
 }
 
+.theme-flex{
+  width: max-content;
+  display: block;
+}
+
+
 @media (min-width: 1024px) {
   header {
     display: d-flex;
@@ -59,17 +67,28 @@ nav {
   nav {
     text-align: left;
     margin-left: -1rem;
-    font-size: 1rem;
+    /* font-size: 1rem; */
 
     padding: 1rem 0;
     margin-top: 1rem;
   }
 }
 
-@media screen and(max-width: 450px) {
+@media (max-width: 758px) {
   .nav-container {
     flex-direction: column !important;
     flex-wrap: wrap;
+    align-items: flex-start;
+    overflow: visible;
+    gap: 5px;
   }
+  .theme-flex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+  }
+}
+@media (max-width: 450px) {
 }
 </style>

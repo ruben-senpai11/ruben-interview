@@ -70,7 +70,7 @@ defineProps({
 <style>
 .project {
   width: 30.5%;
-  min-width: 290px;
+  /* min-width: 290px; */
   max-width: 450px;
   height: 400px;
   height: auto;

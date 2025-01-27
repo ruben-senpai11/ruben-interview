@@ -41,7 +41,7 @@ onMounted(() => {
         {{ name }}
         <span class="font-mono fw-bolder secondaryy">{{ label }}</span>
       </p>
-      <p class="developed-in d-flex fs-5 fs-sm-2 position-absolute primary ">
+      <p class="developed-in d-flex fs-5 fs-sm-2 position-absolute primaryy ">
         proudly developed in
         <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="55" height="55" />
       </p>
@@ -61,10 +61,12 @@ onMounted(() => {
 }
 
 .splash-screen p:not(.green) {
+  color: var(--foreground-color);
   color: #1922FB;
 }
 
 .splash-screen span {
+  color: var(--secondary-color);
   color: #FFC700;
 }
 
