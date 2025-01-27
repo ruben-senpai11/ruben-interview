@@ -10,6 +10,8 @@ import bunny from "../assets/img/bunny-management.png"
 import fig from "../assets/img/joystick-purple.webp"
 import mangaverse from "../assets/img/mangaverse.png"
 import portfolio from "../assets/img/portfolio.png"
+import sharelock from "../assets/img/Sharelock.jpeg"
+import interview from "../assets/img/Interview.png"
 
 import navbar from "../assets/img/responsive-navbar.png"
 import soon from "../assets/img/coming-soon.webp"
@@ -20,7 +22,10 @@ import soon from "../assets/img/coming-soon.webp"
   <div class="main py-lg-5 py-4">
     <div class="d-flex flex-column gap-lg-5 gap-3">
       <h3 class="text-[48px] my-2  ">A pick of my best side-projects & Freelance missions</h3>
-      <Filters />
+      <Filters :languages="['PHP', 'Liquid', 'HTML & CSS', 'JavaScript', 'TypeScript']"
+        :frameworks="['Laravel', 'Remix', 'Remix', 'Next.js', 'Vue.js']" :libraries="['jQUERY', 'React']"
+        :cssFrameworks="['Bootstrap', 'Tailwind CSS', 'Polaris']" :databases="['MySQL', 'PostgreSQL', 'Prisma']"
+        :apis="['REST-API', 'GraphQL']" :status="['Production', 'Developement', 'Paused', 'Stopped']" />
       <section class="d-flex flex-column gap-12 m-auto ">
         <div class="summary d-flex flex-column ">
         </div>
@@ -34,10 +39,20 @@ import soon from "../assets/img/coming-soon.webp"
             <Project :image="lemonplet" title="Lemönplet" :library="['jQUERY']"
               :language="['Liquid', 'HTML & CSS', 'JavaScript']" link="https://lemonplet.com/"
               description="We given this store a new look with a pixel-perfect design mockup into Shopify theme translation" />
+            <Project :image="mangaverse" title="Mangaverse" :framework="['Next.js']" :library="[]"
+              :language="['TypeScript']" :cssFramework="['Tailwind CSS']" :api="['GraphQL']" :database="['PostgreSQL']"
+              link="https://my-mangaverse.vercel.app/"
+              description="Building a unique web app involving multiple-theme switch, server actions, API, design, user-centric approach..." />
+            <Project :image="interview" title="Ruben Interview"
+              description="I figured out to master Vue.js at a new level of proficency. I'm building so an app who includes as well innovative design & structure as advanced tests."
+              :language="['TypeScript']" :css-framework="['Bootstrap']" :library="['GSAP']" :framework="['Vue.js']" />
             <Project :image="bandage" title="Bandage E-commerce" :library="['React']" :framework="[]"
               :language="['TypeScript']" :cssFramework="['Tailwind CSS']" :database="[]"
               link="https://bandage-ecommerce-ui.vercel.app/"
               description="Translating Figma mockup into a pixel-perfect website. I've improved UX with lazyload, animations..." />
+            <Project :image="stratosedi" title="Stratos EDI Shopify App" :library="['React']" :framework="['Remix']"
+              :language="['TypeScript']" :cssFramework="['Polaris']" :api="['GraphQL']" :database="['Prisma',]" link=""
+              description="Building an app to enable merchants to add insurance to given products of their stores from the dashboard." />
             <Project :image="evren" title="Evren Shah Portfolio" :library="['React']" :framework="[]"
               :language="['HTML & CSS', 'TypeScript']" :cssFramework="[]" :database="[]"
               link="https://portofolio-rosy-eight.vercel.app/"
@@ -45,11 +60,7 @@ import soon from "../assets/img/coming-soon.webp"
             <Project :image="fig" title="Fig Intranet" :library="['jQUERY']" :framework="[]"
               :language="['PHP', 'HTML & CSS']" :cssFramework="['Bootstrap']" :database="[]" link=""
               description="For the video games events, we've built this website accessible not through internet but local network to supply essential information to our guests." />
-            <Project :image="mangaverse" title="Mangaverse" :framework="['Next.js']" :library="[]"
-              :language="['TypeScript']" :cssFramework="['Tailwind CSS']" :api="['GraphQL']" :database="['PostgreSQL']"
-              link="https://my-mangaverse.vercel.app/"
-              description="Building a unique web app involving multiple-theme switch, server actions, API, design, user-centric approach..." />
-            <Project :image="stratosedi" title="Stratos EDI Shopify App" :library="['React']" :framework="['Remix']"
+            <Project :image="sharelock" title="Sharelock Shopify App" :library="['React']" :framework="['Remix']"
               :language="['TypeScript']" :cssFramework="['Polaris']" :api="['GraphQL']" :database="['Prisma',]" link=""
               description="Building from scratch a unique app to improve orders tracking by the organization merchants" />
             <Project :image="portfolio" title="My Portfolio" :library="['React']" :framework="['Next.js']"

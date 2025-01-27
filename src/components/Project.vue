@@ -38,18 +38,29 @@ defineProps({
         <p class="description">{{ description }}</p>
         <p class="stack flex gap-2 flex-wrap m-0 p-0">
 
-          <span v-for="(techno, index) in language" :key="index" class="p-language primary m-0 p-0">{{ techno }}</span>
+          <button v-for="(techno, index) in language" :key="index" class="language stack-button primary m-0 p-0">{{
+            techno
+          }}</button>
 
-          <span v-for="(techno, index) in library" :key="index" class="library primary m-0 p-0">{{ techno }}</span>
+          <button v-for="(techno, index) in library" :key="index" class="library stack-button primary m-0 p-0">{{
+            techno
+          }}</button>
 
-          <span v-for="(techno, index) in framework" :key="index" class="framework primary m-0 p-0">{{ techno }}</span>
+          <button v-for="(techno, index) in framework" :key="index" class="framework stack-button primary m-0 p-0">{{
+            techno
+          }}</button>
 
-          <span v-for="(techno, index) in cssFramework " :key="index" class="cssFramework primary m-0 p-0">{{ techno
-          }}</span>
+          <button v-for="(techno, index) in cssFramework " :key="index"
+            class="cssFramework stack-button primary m-0 p-0">{{
+              techno
+            }}</button>
 
-          <span v-for="(techno, index) in api " :key="index" class="api primary m-0 p-0">{{ techno }}</span>
+          <button v-for="(techno, index) in api " :key="index" class="api stack-button primary m-0 p-0">{{ techno
+          }}</button>
 
-          <span v-for="(techno, index) in database" :key="index" class="database primary m-0 p-0">{{ techno }}</span>
+          <button v-for="(techno, index) in database" :key="index" class="database stack-button primary m-0 p-0">{{
+            techno
+          }}</button>
         </p>
       </div>
     </div>
@@ -103,6 +114,12 @@ defineProps({
   gap: 5px;
 }
 
+.stack-button {
+  padding: 0;
+  background-color: transparent;
+  color: var(--primary-color);
+  border: none;
+}
 
 
 @media screen and (max-width: 1200px) {

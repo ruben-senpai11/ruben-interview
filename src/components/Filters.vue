@@ -4,13 +4,17 @@ import { ref } from 'vue';
 import { onMounted } from 'vue';
 import Stack from './Stack.vue';
 
-let language: any = ref([]);
-let library: any = ref([]);
-let framework: any = ref([]);
-let cssFramework: any = ref([]);
-let api: any = ref([]);
-let database: any = ref([]);
-let status: any = ref([])
+defineProps({
+  languages: Array,
+  libraries: Array,
+  frameworks: Array,
+  cssFrameworks: Array,
+  apis: Array,
+  databases: Array,
+  status: Array,
+})
+
+
 
 const fetchStackContents = (stack: string) => {
   const elements = document.querySelectorAll(".stack ." + stack);
@@ -27,6 +31,10 @@ const fetchStackContents = (stack: string) => {
 
 let filtersVisible = ref(false)
 
+const toggleFilters = () => {
+  filtersVisible.value = !filtersVisible.value
+}
+/*
 const loadFilters = () => {
   language.value = [
     "PHP",
@@ -45,10 +53,8 @@ const loadFilters = () => {
   console.log('library: ' + library.value);
   console.log('library.length ' + library);
   console.log('filtersVisible:' + filtersVisible);
-
-
 }
-
+*/
 </script>
 
 <template>
@@ -56,7 +62,7 @@ const loadFilters = () => {
     <div class="d-flex gap-2 align-items-center justify-content-between flex-wrap">
       <h4 class="m-0">Filters</h4>
       <div class="d-flex gap-2 gap-lg-4 justify-content-between ">
-        <button @click="loadFilters()" class="load btn fs-6 d-flex align-items-center gap-2 bg--primary ">
+        <button @click="toggleFilters" class="load btn fs-6 d-flex align-items-center gap-2 bg--primary ">
           <span v-if="!filtersVisible">Show Filters </span>
           <span v-else>Hide Filters </span>
           <!-- <span>Show Filters </span> -->
@@ -72,13 +78,13 @@ const loadFilters = () => {
         </button>
       </div>
     </div>
-    <div class="container d-flex flex-column gap-3 text-center">
-      <Stack label="Librairies" :array=library />
-      <Stack label="Frameworks" :array=framework />
-      <Stack label="Programming Languages" :array=language />
-      <Stack label="CSS Libraries" :array=cssFramework />
-      <Stack label="APIs" :array=api />
-      <Stack label="Databases" :array=database />
+    <div v-if="filtersVisible" class="container d-flex flex-column pt-2 gap-3 text-center">
+      <Stack label="Librairies" :array=libraries />
+      <Stack label="Frameworks" :array=frameworks />
+      <Stack label="Programming Languages" :array=languages />
+      <Stack label="CSS Libraries" :array=cssFrameworks />
+      <Stack label="APIs" :array=apis />
+      <Stack label="Databases" :array=databases />
       <Stack label="Statut" :array=status />
     </div>
   </div>

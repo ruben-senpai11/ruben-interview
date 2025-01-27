@@ -30,10 +30,15 @@ defineProps({
 
 .filter-button {
   margin: auto;
-  padding: 0px 4px !important;
+  padding: 0px 7px;
   height: max-content;
-  color: var(--foreground-color) !important;
+  color: var(--foreground-color);
   background-color: var(--primary-color-light);
+}
+
+.filter-button:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color-light);
 }
 
 @media screen and (max-width: 650px) {

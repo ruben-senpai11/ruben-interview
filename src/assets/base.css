@@ -5,7 +5,7 @@
   --primary-color: #1922FB;
   --secondary-color: #FFC700;
   --primary-color-light: #1922FB1a;
-  --secondary-color-light: #FFC70009;
+  --secondary-color-light: #FFC70011;
 }
 
 [ data-theme="dark"] {
@@ -14,7 +14,7 @@
   --primary-color: #FFc700;
   --secondary-color: #1922FB;
   --primary-color-light: #FFC70022;
-  --secondary-color-light: #3037f51a;
+  --secondary-color-light: #3037f53a;
 }
 
 
