@@ -41,14 +41,5 @@ defineProps({
   background-color: var(--secondary-color-light);
 }
 
-@media screen and (max-width: 650px) {
-
-  .filters-button {
-    /* display: block !important; */
-  }
-
-  .filter-button {
-    /* margin: 2% */
-  }
-}
+@media screen and (max-width: 650px) {}
 </style>

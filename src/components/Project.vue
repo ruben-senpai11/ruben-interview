@@ -38,15 +38,15 @@ defineProps({
         <p class="description">{{ description }}</p>
         <p class="stack flex gap-2 flex-wrap m-0 p-0">
 
+          <button v-for="(techno, index) in framework" :key="index" class="framework stack-button primary m-0 p-0">{{
+            techno
+          }}</button>
+
           <button v-for="(techno, index) in language" :key="index" class="language stack-button primary m-0 p-0">{{
             techno
           }}</button>
 
           <button v-for="(techno, index) in library" :key="index" class="library stack-button primary m-0 p-0">{{
-            techno
-          }}</button>
-
-          <button v-for="(techno, index) in framework" :key="index" class="framework stack-button primary m-0 p-0">{{
             techno
           }}</button>
 

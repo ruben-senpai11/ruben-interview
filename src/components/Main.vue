@@ -23,7 +23,7 @@ import soon from "../assets/img/coming-soon.webp"
     <div class="d-flex flex-column gap-lg-5 gap-3">
       <h3 class="text-[48px] my-2  ">A pick of my best side-projects & Freelance missions</h3>
       <Filters :languages="['PHP', 'Liquid', 'HTML & CSS', 'JavaScript', 'TypeScript']"
-        :frameworks="['Laravel', 'Remix', 'Remix', 'Next.js', 'Vue.js']" :libraries="['jQUERY', 'React']"
+        :frameworks="['Laravel', 'Remix', 'Next.js', 'Vue.js']" :libraries="['jQUERY', 'React']"
         :cssFrameworks="['Bootstrap', 'Tailwind CSS', 'Polaris']" :databases="['MySQL', 'PostgreSQL', 'Prisma']"
         :apis="['REST-API', 'GraphQL']" :status="['Production', 'Developement', 'Paused', 'Stopped']" />
       <section class="d-flex flex-column gap-12 m-auto ">
