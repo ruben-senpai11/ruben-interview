@@ -14,13 +14,14 @@ defineProps({
   status: Array,
 })
 
-
+import {resetFilters} from "../functions/ApplyFilters"
 
 let filtersVisible = ref(false)
 
 const toggleFilters = () => {
   filtersVisible.value = !filtersVisible.value
 }
+
 
 </script>
 
@@ -35,7 +36,7 @@ const toggleFilters = () => {
           <!-- <span>Show Filters </span> -->
         </button>
         <button class="reset btn fs-6 d-flex align-items-center gap-2 bg--primary ">
-          <span>Reset All</span>
+          <span @click="resetFilters" >Reset All</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
             class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z" />
@@ -52,7 +53,7 @@ const toggleFilters = () => {
       <Stack label="CSS Libraries" :array=cssFrameworks />
       <Stack label="APIs" :array=apis />
       <Stack label="Databases" :array=databases />
-      <Stack label="Statut" :array=status />
+      <!-- <Stack label="Statut" :array=status /> -->
     </div>
   </div>
 </template>

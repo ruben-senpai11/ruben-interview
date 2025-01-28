@@ -38,27 +38,27 @@ defineProps({
         <p class="description">{{ description }}</p>
         <p class="stack flex gap-2 flex-wrap m-0 p-0">
 
-          <button v-for="(techno, index) in framework" :key="index" class="framework stack-button primary m-0 p-0">{{
+          <button v-for="(techno, index) in framework" :key="index" class="framework stack-button willFilter primary m-0 p-0">{{
             techno
           }}</button>
 
-          <button v-for="(techno, index) in language" :key="index" class="language stack-button primary m-0 p-0">{{
+          <button v-for="(techno, index) in language" :key="index" class="language stack-button willFilter primary m-0 p-0">{{
             techno
           }}</button>
 
-          <button v-for="(techno, index) in library" :key="index" class="library stack-button primary m-0 p-0">{{
+          <button v-for="(techno, index) in library" :key="index" class="library stack-button willFilter primary m-0 p-0">{{
             techno
           }}</button>
 
           <button v-for="(techno, index) in cssFramework " :key="index"
-            class="cssFramework stack-button primary m-0 p-0">{{
+            class="cssFramework stack-button willFilter primary m-0 p-0">{{
               techno
             }}</button>
 
-          <button v-for="(techno, index) in api " :key="index" class="api stack-button primary m-0 p-0">{{ techno
+          <button v-for="(techno, index) in api " :key="index" class="api stack-button willFilter primary m-0 p-0">{{ techno
           }}</button>
 
-          <button v-for="(techno, index) in database" :key="index" class="database stack-button primary m-0 p-0">{{
+          <button v-for="(techno, index) in database" :key="index" class="database stack-button willFilter primary m-0 p-0">{{
             techno
           }}</button>
         </p>
@@ -71,7 +71,7 @@ defineProps({
 .project {
   width: 30.5%;
   /* min-width: 290px; */
-  max-width: 450px;
+  max-width: 380px;
   height: 400px;
   height: auto;
   padding: 0;
@@ -149,8 +149,7 @@ a, p{
 @media screen and (max-width: 670px) {
 
   .project {
-    width: 100%;
-    max-width: 450px;
+    width: 100%;  
     margin: 0 auto;
     margin-bottom: 35px;
   }
