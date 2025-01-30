@@ -4,7 +4,7 @@ defineProps({
   array: Array
 })
 
-import {applyFilters} from "../functions/ApplyFilters"
+import { applyFilters } from "../functions/ApplyFilters"
 
 </script>
 
@@ -14,7 +14,8 @@ import {applyFilters} from "../functions/ApplyFilters"
       <label class="label bg-body-tertiary fs-6">{{ label }} &nbsp;:</label>
       <!-- <span class="label p-1 bg-body-tertiary">:</span> -->
       <div class="filters-button d-flex  flex-wrap gap-2 ">
-        <button class="filter-button btn" v-for="(stack, index) in array" :key="index" v-on:click="applyFilters(stack as string)">{{ stack }}</button>
+        <button class="filter-button btn" v-for="(stack, index) in array" :key="index"
+          v-on:click="applyFilters(stack as string)">{{ stack }}</button>
       </div>
     </div>
   </div>
@@ -39,7 +40,7 @@ import {applyFilters} from "../functions/ApplyFilters"
   background-color: var(--primary-color-light);
 }
 
-.filter-button.active{
+.filter-button.active {
   border: 1px solid var(--primary-color);
   box-shadow: 0 0 20px var(--primary-color-light);
 }
