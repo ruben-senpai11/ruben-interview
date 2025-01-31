@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-import ThemeMode from './components/ThemeMode.vue'
 import SplashScreen from "./components/SplashScreen.vue"
 import Header from './components/Header.vue'
 import Main from './components/Main.vue'

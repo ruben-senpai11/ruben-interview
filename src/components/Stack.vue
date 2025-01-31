@@ -4,7 +4,7 @@ defineProps({
   array: Array
 })
 
-import { applyFilters } from "../functions/ApplyFilters"
+import { applyFilters } from "../stores/ApplyFilters"
 
 </script>
 
