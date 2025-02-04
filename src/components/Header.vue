@@ -20,9 +20,7 @@ const props = defineProps<{
             <span class="m-0 p-0 primary text-wrap ">Senior Frontend Developer</span>
           </p>
         </a>
-        <div class="theme-flex my-auto ">
           <ThemeMode />
-        </div>
       </div>
     </nav>
   </div>
@@ -56,9 +54,8 @@ nav {
 
 @media (min-width: 1024px) {
   header {
-    display: d-flex;
+    display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
   }
 
   .logo {
@@ -75,19 +72,9 @@ nav {
   }
 }
 
-@media (max-width: 758px) {
-  .nav-container {
-    flex-direction: column !important;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    overflow: visible;
-    gap: 5px;
-  }
-  .theme-flex {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: flex-end;
+@media (max-width: 670px) {
+  .theme{
+    display: none;
   }
 }
 @media (max-width: 450px) {

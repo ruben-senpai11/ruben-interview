@@ -46,7 +46,7 @@ const toggleFilters = () => {
         </button>
       </div>
     </div>
-    <div v-if="filtersVisible" class="container d-flex flex-column pt-2 gap-3 text-center">
+    <div v-if="filtersVisible" class="d-flex flex-column pt-2 gap-3 text-center">
       <Stack label="Librairies" :array=libraries />
       <Stack label="Frameworks" :array=frameworks />
       <Stack label="Programming Languages" :array=languages />
@@ -76,7 +76,7 @@ button.load.btn {
 
   button.reset.btn,
   button.load.btn {
-    padding: 1px 5px;
+    padding: 3px 7px;
   }
 
 }

@@ -9,16 +9,14 @@ import { applyFilters } from "../stores/ApplyFilters"
 </script>
 
 <template>
-  <div class="row">
-    <div class="ccol d-flex flex-wrap p-0 gap-2 gap-lg-2 ">
+    <div class="d-flex flex-wrap p-0 gap-2 gap-lg-2 ">
       <label class="label bg-body-tertiary fs-6">{{ label }} &nbsp;:</label>
       <!-- <span class="label p-1 bg-body-tertiary">:</span> -->
-      <div class="filters-button d-flex  flex-wrap gap-2 ">
+      <div class="filters-button d-block text-start ">
         <button class="filter-button btn" v-for="(stack, index) in array" :key="index"
           v-on:click="applyFilters(stack as string)">{{ stack }}</button>
       </div>
     </div>
-  </div>
 </template>
 
 <style>
@@ -33,7 +31,7 @@ import { applyFilters } from "../stores/ApplyFilters"
 }
 
 .filter-button {
-  margin: auto;
+  margin: 0 4px;
   padding: 0px 7px;
   height: max-content;
   color: var(--foreground-color);
@@ -50,5 +48,9 @@ import { applyFilters } from "../stores/ApplyFilters"
   background-color: var(--secondary-color-light);
 }
 
-@media screen and (max-width: 650px) {}
+@media screen and (max-width: 650px) {
+  .filter-button{
+  margin: 4px;
+  }
+}
 </style>
