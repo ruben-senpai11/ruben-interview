@@ -40,13 +40,14 @@ import soon from "../assets/img/coming-soon.webp"
             <Project :image="lemonplet" title="Lemönplet" :library="['jQUERY']"
               :language="['Liquid', 'HTML & CSS', 'JavaScript']" link="https://lemonplet.com/"
               description="We given this store a new look with a pixel-perfect design mockup into Shopify theme translation" />
-            <Project :image="mangaverse" title="Mangaverse" :framework="['Next.js']" :library="[]"
+            <Project :image="mangaverse" title="Mangaverse" :framework="['Next.js']" :library="['React']"
               :language="['TypeScript']" :cssFramework="['Tailwind CSS']" :api="['GraphQL']" :database="['PostgreSQL']"
               link="https://my-mangaverse.vercel.app/"
               description="Building a unique web app involving multiple-theme switch, server actions, API, design, user-centric approach..." />
             <Project :image="interview" title="Ruben Interview"
               description="I figured out to master Vue.js at a new level of proficency. I'm building so an app who includes as well innovative design & structure as advanced tests."
-              :language="['TypeScript']" :css-framework="['Bootstrap']" :library="['GSAP']" :framework="['Vue.js']" />
+              :language="['TypeScript']" :css-framework="['Bootstrap']" :library="['React', 'GSAP']"
+              :framework="['Vue.js']" />
             <Project :image="bandage" title="Bandage E-commerce" :library="['React']" :framework="[]"
               :language="['TypeScript']" :cssFramework="['Tailwind CSS']" :database="[]"
               link="https://bandage-ecommerce-ui.vercel.app/"
