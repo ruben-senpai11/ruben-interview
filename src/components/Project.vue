@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 defineProps({
   image: String,
   title: String,
@@ -12,11 +14,26 @@ defineProps({
   statut: String,
   link: String,
 })
+
+const isPopoverVisible = ref(false);
+
+// Methods to control the popover
+const togglePopover = () => {
+  isPopoverVisible.value = !isPopoverVisible.value;
+};
+
+const closePopover = () => {
+  isPopoverVisible.value = false;
+};
 </script>
 
 <template>
-  <div class="project flex flex-col">
-    <div class="project-link">
+  <div class="project flex flex-col relative ">
+    <div class="project-link" @click="togglePopover">
+      <div v-if="isPopoverVisible" class="project-popover">
+        <p>This is a simple popover!</p>
+        <button class="close-btn" @click="closePopover">Close</button>
+      </div>
       <div class="cover-image flex flex-col">
         <img :src="image" alt="Project Image" />
       </div>
@@ -38,29 +55,34 @@ defineProps({
         <p class="description">{{ description }}</p>
         <p class="stack flex gap-2 flex-wrap m-0 p-0">
 
-          <button v-for="(techno, index) in framework" :key="index" class="framework stack-button willFilter primary m-0 p-0">{{
-            techno
-          }}</button>
+          <button v-for="(techno, index) in framework" :key="index"
+            class="framework stack-button willFilter primary m-0 p-0">{{
+              techno
+            }}</button>
 
-          <button v-for="(techno, index) in language" :key="index" class="language stack-button willFilter primary m-0 p-0">{{
-            techno
-          }}</button>
+          <button v-for="(techno, index) in language" :key="index"
+            class="language stack-button willFilter primary m-0 p-0">{{
+              techno
+            }}</button>
 
-          <button v-for="(techno, index) in library" :key="index" class="library stack-button willFilter primary m-0 p-0">{{
-            techno
-          }}</button>
+          <button v-for="(techno, index) in library" :key="index"
+            class="library stack-button willFilter primary m-0 p-0">{{
+              techno
+            }}</button>
 
           <button v-for="(techno, index) in cssFramework " :key="index"
             class="cssFramework stack-button willFilter primary m-0 p-0">{{
               techno
             }}</button>
 
-          <button v-for="(techno, index) in api " :key="index" class="api stack-button willFilter primary m-0 p-0">{{ techno
-          }}</button>
-
-          <button v-for="(techno, index) in database" :key="index" class="database stack-button willFilter primary m-0 p-0">{{
+          <button v-for="(techno, index) in api " :key="index" class="api stack-button willFilter primary m-0 p-0">{{
             techno
           }}</button>
+
+          <button v-for="(techno, index) in database" :key="index"
+            class="database stack-button willFilter primary m-0 p-0">{{
+              techno
+            }}</button>
         </p>
       </div>
     </div>
@@ -68,9 +90,45 @@ defineProps({
 </template>
 
 <style scoped>
+.popover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.popover-trigger {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.project-popover {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.close-btn {
+  background: #ff5f57;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
 .project {
   width: 30.5%;
-  /* min-width: 290px; */
   max-width: 380px;
   height: 400px;
   height: auto;
@@ -121,9 +179,10 @@ defineProps({
   border: none;
 }
 
-a, p{
-  margin: 0!important;
-  padding: 0!important;
+a,
+p {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 @media screen and (max-width: 1200px) {
@@ -149,7 +208,7 @@ a, p{
 @media screen and (max-width: 670px) {
 
   .project {
-    width: 100%;  
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 35px;
   }
