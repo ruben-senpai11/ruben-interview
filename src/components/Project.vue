@@ -29,7 +29,7 @@ const closePopover = () => {
 
 <template>
   <div class="project flex flex-col relative ">
-    <div class="project-link" @click="togglePopover">
+    <div class="project-link" @click="">
       <div v-if="isPopoverVisible" class="project-popover">
         <p>This is a simple popover!</p>
         <button class="close-btn" @click="closePopover">Close</button>
