@@ -76,10 +76,9 @@ nav {
   }
 }
 
-@media (max-width: 450px) {
-
-  a p {
-    /* font-size: 1rem!important; */
+@media (max-width: 250px) {
+  .orange {
+    display: none;
   }
 }
 </style>

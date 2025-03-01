@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SplashScreen from "./components/SplashScreen.vue"
 import Header from './components/Header.vue'
+import Footer from './components/footer.vue'
 import Main from './components/Main.vue'
 import { onMounted } from 'vue'
 import gsap from "gsap";
@@ -26,6 +27,7 @@ onMounted(() => {
   <div class="container-xl">
     <Header :name=name />
     <Main />
+    <Footer />
   </div>
 </template>
 
