@@ -71,6 +71,10 @@ import ThemeMode from "./ThemeMode.vue"
   display: none;
 }
 
+h2 {
+  margin: 0;
+}
+
 @media (max-width: 670px) {
 
   .footer-theme {
