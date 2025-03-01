@@ -197,7 +197,7 @@ p {
 
   .project {
     width: 48.5%;
-    margin-bottom: 4.5%;
+    margin: 0 auto 4.5% auto;
   }
 
   .gap-8 {
@@ -210,7 +210,7 @@ p {
   .project {
     width: 100%;
     margin: 0 auto;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
   }
 
   .cover-image img {
