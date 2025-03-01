@@ -6,7 +6,7 @@ import { onMounted } from 'vue'
 import gsap from "gsap";
 
 const name = "Ruben Honfovou "
-const delay = 2500
+const delay = 250000
 
 onMounted(() => {
   const timeout = setTimeout(() => {
@@ -37,7 +37,7 @@ onMounted(() => {
 
 @media (max-width: 1250px) {
   .container-xl {
-    padding: 0 7% !important;
+    padding: 0 4% !important;
   }
 
 }

@@ -20,7 +20,7 @@ const props = defineProps<{
             <span class="m-0 p-0 primary text-wrap ">Senior Frontend Developer</span>
           </p>
         </a>
-          <ThemeMode />
+        <ThemeMode />
       </div>
     </nav>
   </div>
@@ -46,7 +46,7 @@ nav {
   color: inherit;
 }
 
-.theme-flex{
+.theme-flex {
   width: max-content;
   display: block;
 }
@@ -73,14 +73,15 @@ nav {
 }
 
 @media (max-width: 670px) {
-  .theme{
+  .theme {
     display: none;
   }
 }
+
 @media (max-width: 450px) {
-  
-  a p{
-    font-size: 1rem!important;
+
+  a p {
+    /* font-size: 1rem!important; */
   }
 }
 </style>

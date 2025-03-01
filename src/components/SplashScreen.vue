@@ -93,12 +93,25 @@ onMounted(() => {
 
 @media screen and (max-width: 650px) {
   .splash-screen {
-    border: 35px solid #1922FB;
-    padding: 15%;
+    border: 20px solid #1922FB;
+    padding: 5%;
   }
 
   .splash-screen p {
+    text-align: start;
     gap: 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  .developed-in {
+    font-size: 1rem !important;
+    bottom: 5%;
+    /* right: 10%; */
+  }
+
+  .logo {
+    width: 35px;
+    height: 35px;
   }
 }
 </style>
