@@ -11,7 +11,7 @@ defineProps({
   cssFramework: Array,
   api: Array,
   database: Array,
-  statut: String,
+  status: String,
   link: String,
 })
 

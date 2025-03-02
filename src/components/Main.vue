@@ -33,19 +33,19 @@ import navbar from "../assets/img/responsive-navbar.png"
           <div class="projects-grid ">
             <Project :image="bunny" title="Bunny Management" :library="['jQUERY']" :framework="['Laravel']"
               :language="['PHP']" :cssFramework="['Bootstrap']" :api="['REST-API']" :database="['MySQL',]"
-              link="https://whitedev.vercel.app/video/bunny.webm"
+              link="https://whitedev.vercel.app/video/bunny.webm" status="paused"
               description="With given templates, I created dynamic forms, custom pages & datatables and an awesome landing page" />
             <Project :image="lemonplet" title="Lemönplet" :library="['jQUERY']"
               :language="['Liquid', 'HTML & CSS', 'JavaScript']" link="https://lemonplet.com/"
               description="We given this store a new look with a pixel-perfect design mockup into Shopify theme translation" />
             <Project :image="mangaverse" title="Mangaverse" :framework="['Next.js']" :library="['React']"
               :language="['TypeScript']" :cssFramework="['Tailwind CSS']" :api="['GraphQL']" :database="['PostgreSQL']"
-              link="https://my-mangaverse.vercel.app/"
+              link="https://my-mangaverse.vercel.app/" status="development"
               description="Building a unique web app involving multiple-theme switch, server actions, API, design, user-centric approach..." />
             <Project :image="interview" title="Ruben Interview"
               description="I figured out to master Vue.js at a new level of proficency. I'm building so an app who includes as well innovative design & structure as advanced tests."
               :language="['TypeScript']" :css-framework="['Bootstrap']" :library="['React', 'GSAP']"
-              :framework="['Vue.js']" />
+              :framework="['Vue.js']" status="production" />
             <Project :image="bandage" title="Bandage E-commerce" :library="['React']" :framework="[]"
               :language="['TypeScript']" :cssFramework="['Tailwind CSS']" :database="[]"
               link="https://bandage-ecommerce-ui.vercel.app/"
@@ -55,25 +55,26 @@ import navbar from "../assets/img/responsive-navbar.png"
               description="Building an app to enable merchants to add insurance to given products of their stores from the dashboard." />
             <Project :image="evren" title="Evren Shah Portfolio" :library="['React']" :framework="[]"
               :language="['HTML & CSS', 'TypeScript']" :cssFramework="[]" :database="[]"
-              link="https://portofolio-rosy-eight.vercel.app/"
+              link="https://portofolio-rosy-eight.vercel.app/" status="production"
               description="Integration of a frontend developer portfolio mockup in a react website. I've added a beta double theme switch" />
-            <Project :image="fig" title="Fig Intranet" :library="['jQUERY']" :framework="[]"
+            <Project :image="fig" title="Fig Intranet" :library="['jQUERY']" :framework="[]" status="production"
               :language="['PHP', 'HTML & CSS']" :cssFramework="['Bootstrap']" :database="[]" link=""
               description="For the video games events, we've built this website accessible not through internet but local network to supply essential information to our guests." />
             <Project :image="sharelock" title="Sharelock Shopify App" :library="['React']" :framework="['Remix']"
               :language="['TypeScript']" :cssFramework="['Polaris']" :api="['GraphQL']" :database="['Prisma',]" link=""
               description="Building from scratch a unique app to improve orders tracking by the organization merchants" />
             <Project :image="portfolio" title="My Portfolio" :library="['React']" :framework="['Next.js']"
-              :language="['TypeScript']" :cssFramework="['Tailwind CSS']" :database="[]"
+              status="production" :language="['TypeScript']" :cssFramework="['Tailwind CSS']" :database="[]"
               link="https://whitedev.vercel.app/"
               description="Crafted a simple & unique portfolio to tell you about me. It involved out-of-the-box thinking, user-centered approach and so on..." />
             <Project :image="navbar" title="Responsive Navbar" :library="[]" :framework="[]"
-              :language="['HTML & CSS', 'JavaScript']" :cssFramework="[]" :database="[]"
+              :language="['HTML & CSS', 'JavaScript']" :cssFramework="[]" :database="[]" status="production"
               link="https://github.com/ruben-senpai11/Reponsive-Navbar"
               description="Fully Responsive Navbar built from scratch. If creating Navbar stucks, here is a built-from-scratch and easy-to-understand responsive navbar to help you stand out." />
-            <Project :image="soon" title="Multiple Themes Switches" link="" description="Coming soon..." />
-            <Project :image="soon" title="Infinite Scroll" link="" description="Coming soon..." />
-            <Project :image="soon" title="Responsive Grid" link="" description="Coming soon..." />
+            <Project :image="soon" title="Multiple Themes Switches" link="" description="Coming soon..."
+              status="development" />
+            <Project :image="soon" title="Infinite Scroll" link="" description="Coming soon..." status="development" />
+            <Project :image="soon" title="Responsive Grid" link="" description="Coming soon..." status="development" />
           </div>
         </div>
       </section>

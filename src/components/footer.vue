@@ -47,7 +47,7 @@ import ThemeMode from "./ThemeMode.vue"
           </a>
         </span>
         <span class="d-flex gap-2">
-          <a href="https://www.linkedin.com/in/ruben-white22/" target="_blank" class="d-flex gap-2 primary ">My
+          <a href="https://whitedev.vercel.app/en" target="_blank" class="d-flex gap-2 primary ">My
             Website
             <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
               <path fillRule="evenodd"

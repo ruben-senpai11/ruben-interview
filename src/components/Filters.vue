@@ -36,7 +36,7 @@ const toggleFilters = () => {
           <!-- <span>Show Filters </span> -->
         </button>
         <button class="reset btn fs-6 d-flex align-items-center gap-2 bg--primary ">
-          <span @click="resetFilters">Reset All</span>
+          <span @click="resetFilters">Reset </span>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
             class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z" />
@@ -46,7 +46,7 @@ const toggleFilters = () => {
         </button>
       </div>
     </div>
-    <div v-if="filtersVisible" class="d-flex flex-column pt-2 gap-3 text-center">
+    <div v-if="filtersVisible" class="d-flex flex-column pt-2 gap-2 gap-lg-3 text-center">
       <Stack label="Librairies" :array=libraries />
       <Stack label="Frameworks" :array=frameworks />
       <Stack label="Programming Languages" :array=languages />
