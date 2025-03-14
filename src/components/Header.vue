@@ -17,7 +17,7 @@ const props = defineProps<{
           <p class="m-0 p-0 d-flex align-items-center flex-wrap text-wrap ">
             {{ name }}
             <span class="m-0 p-0 orange text-wrap "> &nbsp;&nbsp;| &nbsp;</span>
-            <span class="m-0 p-0 primary text-wrap ">Senior Frontend Developer</span>
+            <span class="m-0 p-0 primary text-wrap ">Mid-level Frontend Developer</span>
           </p>
         </a>
         <ThemeMode />
